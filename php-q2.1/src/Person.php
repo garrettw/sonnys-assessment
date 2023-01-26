@@ -2,16 +2,26 @@
 
 namespace App;
 
+/**
+ * @property-read string $lastName
+ * @property-read string $firstName
+ * @property-read string|null $middleName
+ */
 class Person
 {
-    protected $firstName;
-    protected $middleName;
-    protected $lastName;
+    private $lastName;
+    private $firstName;
+    private $middleName;
     
-    public function __construct($last, $first, $middle = null)
+    public function __construct(string $last, string $first, $middle = null)
     {
         $this->lastName = $last;
         $this->firstName = $first;
         $this->middleName = $middle;
+    }
+    
+    public function __get($attr)
+    {
+        return $this->$attr;
     }
 }
