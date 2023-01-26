@@ -22,7 +22,7 @@ class Employee
     /** @var Person */
     private $person;
 
-    /** $var int */
+    /** @var int */
     private $id;
 
     public function __construct(Person $person, int $id)
