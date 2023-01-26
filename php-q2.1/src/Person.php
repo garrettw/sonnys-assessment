@@ -9,8 +9,13 @@ namespace App;
  */
 class Person
 {
+    /** @var string */
     private $lastName;
+    
+    /** @var string */
     private $firstName;
+    
+    /** @var string|null */
     private $middleName;
     
     public function __construct(string $last, string $first, $middle = null)
