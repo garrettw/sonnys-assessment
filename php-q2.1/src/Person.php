@@ -9,6 +9,8 @@ namespace App;
  */
 class Person
 {
+    use Immutable;
+    
     /** @var string */
     private $lastName;
     
