@@ -17,9 +17,11 @@ namespace App;
  */
 class Employee
 {
+    use Immutable;
+
     /** @var Person */
     private $person;
-    
+
     /** $var int */
     private $id;
 
@@ -28,7 +30,7 @@ class Employee
         $this->person = $person;
         $this->id = $id;
     }
-    
+
     public function __get($attr)
     {
         if (property_exists($this->person->$attr)) {
