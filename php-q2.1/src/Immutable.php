@@ -15,6 +15,7 @@ trait Immutable
      * task and I've probably gone plenty far already.
      *
      * @param array $newProps the list of properties to be changed (as keys) with their new values
+     * @return static
      */
     public function with(array $newProps)
     {
