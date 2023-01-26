@@ -20,7 +20,7 @@ class Person
     /** @var string|null */
     private $middleName;
     
-    public function __construct(string $last, string $first, $middle = null)
+    public function __construct(string $last, string $first, ?string $middle = null)
     {
         $this->lastName = $last;
         $this->firstName = $first;
