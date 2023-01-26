@@ -9,10 +9,18 @@ namespace App;
  * not only is it more flexible, it ensures that interactions
  * between classes are forced to use public APIs and therefore
  * no unnecessary knowledge of the other class' inner workings.
+ *
+ * @property-read string $lastName
+ * @property-read string $firstName
+ * @property-read string|null $middleName
+ * @property-read int $id
  */
 class Employee
 {
+    /** @var Person */
     private $person;
+    
+    /** $var int */
     private $id;
 
     public function __construct(Person $person, int $id)
@@ -23,12 +31,9 @@ class Employee
     
     public function __get($attr)
     {
-        if (property_exists($this->$attr)) {
-            return $this->$attr;
-        }
         if (property_exists($this->person->$attr)) {
             return $this->person->$attr;
         }
-        throw new \RuntimeException('Invalid attribute');
+        return $this->$attr;
     }
 }
