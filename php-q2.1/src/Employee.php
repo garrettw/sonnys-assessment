@@ -33,7 +33,7 @@ class Employee
 
     public function __get($attr)
     {
-        if (property_exists($this->person->$attr)) {
+        if (property_exists($this->person, $attr)) {
             return $this->person->$attr;
         }
         return $this->$attr;
