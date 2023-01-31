@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Provided\RemoteControl;
+
 class RemoteUser
 {
     /** @var RemoteControl|null */
