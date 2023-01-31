@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Pegasus
+class Pegasus implements CanFly, CanGallop
 {
-    use FlyAbility, GallopAbility;
+    use BirdStyleFlyAbility, HorseStyleGallopAbility;
 }
