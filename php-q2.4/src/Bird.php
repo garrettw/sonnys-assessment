@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Bird
+class Bird implements CanFly
 {
-    use FlyAbility;
+    use BirdStyleFlyAbility;
 }
