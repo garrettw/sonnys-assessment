@@ -11,9 +11,5 @@ $uniRemote = new App\UniversalRemote($tv, $cableBox);
 
 $user = new App\RemoteUser();
 
-$user->holdRemote($tvRemote)->pressPowerOn();
-// still holding TV remote
+$user->pressPowerOn($tvRemote);
 $user->pressPowerOn($uniRemote);
-// universal remote has been pressed, but still holding TV remote and now dropping it
-$user->dropRemote();
-// now holding no remote, so subsequent calls to $user->pressPowerOn() would fail
