@@ -30,7 +30,7 @@ class RemoteUser
     /**
      * Pick up a new remote, or replace the one in hand with a different one.
      */
-    public function hold(RemoteControl $remote)
+    public function holdRemote(RemoteControl $remote)
     {
         $this->heldRemote = $remote;
     }
@@ -38,7 +38,7 @@ class RemoteUser
     /**
      * Drop the remote currently in hand.
      */
-    public function drop()
+    public function dropRemote()
     {
         $this->heldRemote = null;
     }
