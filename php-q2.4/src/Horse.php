@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Horse
+class Horse implements CanGallop
 {
-    use GallopAbility;
+    use HorseStyleGallopAbility;
 }
